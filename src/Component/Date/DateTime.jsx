@@ -1,16 +1,15 @@
-import React from "react";
+// import React from "react";
 
-function DateTime(){
-    
-    return get
-    // return(
-    //     // <div className="Date">
-    //     //     <div className="Date__Days"></div>
-    //     //     <div className="Date__Hours"></div>
-    //     //     <div className="Date__Minutes"></div>
-    //     //     <div className="Date__Seconds"></div>
-    //     // </div>
-    // )
+function DateTime({count}){
+
+    return(
+        <div className="Date">
+            <div className="Date__Days">{count[0]}</div>
+            <div className="Date__Hours">{count[1]}</div>
+            <div className="Date__Minutes">{count[2]}</div>
+            <div className="Date__Seconds">{count[3]}</div>
+        </div>
+    )
 }
 
 export default DateTime 
