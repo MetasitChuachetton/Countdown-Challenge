@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
+import DateContent from './Component/Content/Content'
+import DateTime from './Component/Date/DateTime'
 
 function App() {
   //state
@@ -8,7 +10,8 @@ function App() {
 
   //function input TimeStamp and then return day,hours,minutes and seconds
   const getCountdown = (birthDate) => {
-    let now = new Date().getTime()
+    let now = new Date().getTime() // time since 1970 in m.sec.
+    console.log(now);
     let timeCount = birthDate - now //convert milliseconds to seconds
 
     let days = Math.floor(timeCount / (60 * 60 * 24)) //convert seconds to days
@@ -21,6 +24,10 @@ function App() {
     return [days, hours]
   }
 
+  const birthDate = () => {
+    let birth = 
+  }
+
   useEffect(() => {
     const intervalTask = setInterval(() => {
       setTime(new Date())
@@ -30,8 +37,8 @@ function App() {
 
   return (
     <div className='container'>
-      {time.getDate()}/{time.getMonth() + 1}/{time.getFullYear()}{' '}
-      {time.getHours()}:{time.getMinutes() + 1}:{time.getSeconds()}
+      <DateContent/>
+      
     </div>
   )
 }
