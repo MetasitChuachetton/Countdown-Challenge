@@ -1,7 +1,74 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 html {
     font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 780px;}
+
+.Content__header{
+    font-size: 5rem;
+    margin: 3rem 0;
+}
+
+.Content__text {
+    font-size: 1.5rem;
+    margin: 3rem 0;
+}
+.Date{
+    display: flex;
+    margin: 3rem 0;
+    width: 100%;
+    justify-content: center;
+    gap: 8rem;
+
+}
+.Date__Days,
+.Date__Hours,
+.Date__Minutes,
+.Date__Seconds {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    box-shadow: -15px -15px 2px 1px rgb(165 243 252);
+    background-image: linear-gradient(to right bottom, #4f7bbe, #2d96d4, #00b0e3, #00caea, #12e2eb);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+    padding-bottom: 42px;
+}
+
+.Date__script  {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    height: 30%;
+    border-radius: 0 0px 20px 20px;
+    background-color: white;
+    color: rgb(85, 79, 79);
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width:818px){
+    .Date{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
