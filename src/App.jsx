@@ -9,7 +9,7 @@ function App() {
   const [time, setTime] = useState(new Date())
   //function input TimeStamp and then return day,hours,minutes and seconds
   const getCountdown = (birthDate) => {
-    let now = new Date().getTime() // time since 1970 in m.sec.
+    let now = new Date(time).getTime() // time since 1970 in m.sec.
     // console.log(birthDate);
     // console.log(now);
     let timeCount = birthDate - now //convert milliseconds to seconds
